@@ -1,0 +1,18 @@
+﻿<Window x:Class="WeatherApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Menú´principal." Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/MainWindowBackground.jpg"/>
+        </Grid.Background>
+        <Label Content="Bienvenido/a a WeatherApp." HorizontalAlignment="Center" Margin="0,125,0,0" VerticalAlignment="Top" Width="324" HorizontalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="24" Foreground="White"/>
+        <TextBox x:Name="CityTextBox" HorizontalAlignment="Center" VerticalAlignment="Top" Width="396" Height="30" FontFamily="Segoe UI Light" FontSize="12" TextWrapping="Wrap" VerticalContentAlignment="Center" BorderBrush="White" Margin="0,199,0,0" />
+        <Button x:Name="CheckCurrentWeatherButton" Content="Consultar clima actual" HorizontalAlignment="Center" Margin="0,280,0,0" VerticalAlignment="Top" Height="40" Width="300" FontFamily="Segoe UI Light" Click="CheckCurrentWeatherButtonClick" />
+        <Button x:Name="CheckWeatherForecastButton" Content="Consultar pronóstico de clima" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top" Height="39" Width="300" FontFamily="Segoe UI Light" Click="CheckWeatherForecastButtonClick"/>
+        <Label Content="Ingrese el nombre de una ciudad..." HorizontalAlignment="Left" Margin="190,165,0,0" VerticalAlignment="Top" Foreground="White"/>
+    </Grid>
+</Window>
