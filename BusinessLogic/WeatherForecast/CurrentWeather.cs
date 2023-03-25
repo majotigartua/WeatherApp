@@ -1,7 +1,5 @@
 ﻿using Clouds = WeatherApp.BusinessLogic.CurrentWeather.Weather;
 using Rain = WeatherApp.BusinessLogic.CurrentWeather.Rain;
-using Snow = WeatherApp.BusinessLogic.CurrentWeather.Snow;
-using System;
 using Weather = WeatherApp.BusinessLogic.CurrentWeather.Weather;
 using Wind = WeatherApp.BusinessLogic.CurrentWeather.Wind;
 using Newtonsoft.Json;
@@ -24,7 +22,7 @@ namespace WeatherApp.BusinessLogic.WeatherForecast
         [JsonProperty("visibility")]
         public int Visibility { get; set; }
         [JsonProperty("pop")]
-        public int Precipitation { get; set; }
+        public double Precipitation { get; set; }
         [JsonProperty("rain")]
         public Rain Rain { get; set; }
         [JsonProperty("sys")]

@@ -4,10 +4,41 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Consultar pronóstico de clima." Height="450" Width="800">
+        Title="Consultar pronóstico de clima." Height="450" Width="900">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/PinkGrayGradientBackground.jpg"/>
         </Grid.Background>
+        <Label x:Name="NameLabel" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="450" HorizontalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="24" Foreground="White"/>
+        <Border BorderBrush="White" BorderThickness="1" Margin="33,90,717,95"/>
+        <Label Content="Día 1" HorizontalAlignment="Left" Margin="80,90,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White"/>
+        <Image x:Name="FirstDayWeatherIcon" HorizontalAlignment="Left" Height="100" Margin="52,105,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="FirstDayDescriptionLabel" HorizontalAlignment="Left" Margin="40,200,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="FirstDayMiniumTemperatureLabel" Content="Temp. mínima: " HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="FirstDayMaxiumTemperatureLabel" Content="Temp. máxima: " HorizontalAlignment="Left" Margin="40,270,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Border BorderBrush="White" BorderThickness="1" Margin="203,90,547,95"/>
+        <Label Content="Día 2" HorizontalAlignment="Left" Margin="250,90,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White"/>
+        <Image x:Name="SecondDayWeatherIcon" HorizontalAlignment="Left" Height="100" Margin="222,105,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="SecondDayDescriptionLabel" HorizontalAlignment="Left" Margin="210,200,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="SecondDayMiniumTemperatureLabel" Content="Temp. mínima: " HorizontalAlignment="Left" Margin="210,240,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="SecondDayMaxiumTemperatureLabel" Content="Temp. máxima: " HorizontalAlignment="Left" Margin="210,270,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Border BorderBrush="White" BorderThickness="1" Margin="373,90,377,95"/>
+        <Label Content="Día 3" HorizontalAlignment="Left" Margin="420,90,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White"/>
+        <Image x:Name="ThirdDayWeatherIcon" HorizontalAlignment="Left" Height="100" Margin="392,105,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="ThirdDayDescriptionLabel" HorizontalAlignment="Left" Margin="380,200,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="ThirdDayMiniumTemperatureLabel" Content="Temp. mínima: " HorizontalAlignment="Left" Margin="380,240,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="ThirdDayMaxiumTemperatureLabel" Content="Temp. máxima: " HorizontalAlignment="Left" Margin="380,270,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Border BorderBrush="White" BorderThickness="1" Margin="543,90,207,95"/>
+        <Label Content="Día 4" HorizontalAlignment="Left" Margin="590,90,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White"/>
+        <Image x:Name="FourthDayWeatherIcon" HorizontalAlignment="Left" Height="100" Margin="562,105,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="FourthDayDescriptionLabel" HorizontalAlignment="Left" Margin="550,200,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="FourthDayMiniumTemperatureLabel" Content="Temp. mínima: " HorizontalAlignment="Left" Margin="550,240,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="FourthDayMaxiumTemperatureLabel" Content="Temp. máxima: " HorizontalAlignment="Left" Margin="550,270,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Border BorderBrush="White" BorderThickness="1" Margin="713,90,37,95"/>
+        <Label Content="Día 5" HorizontalAlignment="Left" Margin="760,90,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White"/>
+        <Image x:Name="FifthDayWeatherIcon" HorizontalAlignment="Left" Height="100" Margin="732,105,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="FifthDayDescriptionLabel" HorizontalAlignment="Left" Margin="720,200,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" FontSize="14" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="FifthDayMiniumTemperatureLabel" Content="Temp. mínima: " HorizontalAlignment="Left" Margin="720,240,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
+        <Label x:Name="FifthDayMaxiumTemperatureLabel" Content="Temp. máxima: " HorizontalAlignment="Left" Margin="720,270,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semilight" Foreground="White" HorizontalContentAlignment="Left"/>
     </Grid>
 </Window>

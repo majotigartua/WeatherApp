@@ -2,7 +2,6 @@
 using System.Windows;
 using WeatherApp.Services;
 using WeatherApp.BusinessLogic.WeatherForecast;
-using System;
 using WeatherApp.Views;
 
 namespace WeatherApp
@@ -45,13 +44,12 @@ namespace WeatherApp
         {
             var checkCurrentWeatherWindow = new CheckCurrentWeatherWindow();
             checkCurrentWeatherWindow.ConfigureWindow(currentWeather);
-            Close();
             checkCurrentWeatherWindow.Show();
         }
 
         private async void CheckWeatherForecastButtonClick(object sender, RoutedEventArgs e)
         {
-            string city = CityTextBox.Text.ToLower();
+            string city = CityTextBox.Text;
             WeatherForecastService weatherForecastService = await Service.GetWeatherForecast(city);
             if (!weatherForecastService.Error)
             {
@@ -71,13 +69,14 @@ namespace WeatherApp
         {
             var checkWeatherForecast = new CheckWeatherForecastWindow();
             checkWeatherForecast.ConfigureWindow(weatherForecast);
-            Close();
             checkWeatherForecast.Show();
         }
 
         private void CityTextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-
+            string city = CityTextBox.Text;
+            CheckCurrentWeatherButton.IsEnabled = !string.IsNullOrEmpty(city);
+            CheckWeatherForecastButton.IsEnabled = !string.IsNullOrEmpty(city);
         }
     }
 }

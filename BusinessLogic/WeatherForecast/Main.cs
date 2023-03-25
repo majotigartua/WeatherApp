@@ -21,6 +21,6 @@ namespace WeatherApp.BusinessLogic.WeatherForecast
         [JsonProperty("humidity")]
         public int Humidity { get; set; }
         [JsonProperty("temp_kf")]
-        public int Id { get; set; }
+        public string Id { get; set; }
     }
 }

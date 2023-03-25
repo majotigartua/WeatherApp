@@ -65,12 +65,5 @@ namespace WeatherApp.Views
             string maxiumTemperature = main.MaxiumTemperature.ToString() + "°";
             MaxiumTemperatureLabel.Content += maxiumTemperature;
         }
-
-        private void GoBackButtonClick(object sender, RoutedEventArgs e)
-        {
-            var mainWindow = new MainWindow();
-            Close();
-            mainWindow.Show();
-        }
     }
 }

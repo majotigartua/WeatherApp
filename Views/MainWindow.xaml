@@ -9,7 +9,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/MainWindowBackground.jpg"/>
         </Grid.Background>
-        <Label Content="Bienvenido/a a WeatherApp." HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" Width="484" HorizontalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="36" Foreground="White"/>
+        <Label Content="Bienvenido/a a WeatherApp" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" Width="484" HorizontalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="36" Foreground="White"/>
         <Label Content="Ingrese el nombre de una ciudad..." HorizontalAlignment="Left" Margin="190,167,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
         <TextBox x:Name="CityTextBox" HorizontalAlignment="Center" VerticalAlignment="Top" Width="396" Height="30" FontSize="14" TextWrapping="Wrap" VerticalContentAlignment="Center" BorderBrush="White" Margin="0,199,0,0" TextChanged="CityTextBoxTextChanged" />
         <Button x:Name="CheckCurrentWeatherButton" Content="Consultar clima actual" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Height="40" Width="250" Click="CheckCurrentWeatherButtonClick" FontSize="14" FontFamily="Segoe UI Semilight" IsEnabled="False" />
