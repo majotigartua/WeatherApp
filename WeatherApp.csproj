@@ -133,6 +133,8 @@
   <ItemGroup>
     <Resource Include="Resources\MainWindowBackground.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\PinkGrayGradientBackground.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,10 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WeatherApp.Views"
         mc:Ignorable="d"
-        Title="CheckCurrentWeatherWindow" Height="450" Width="800">
+        Title="Consultar clima actual." Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/PinkGrayGradientBackground.jpg"/>
+        </Grid.Background>
+        <Image x:Name="WeatherIcon" HorizontalAlignment="Left" Height="200" Margin="45,112,0,0" VerticalAlignment="Top" Width="200"/>
+        <Label x:Name="NameLabel" HorizontalAlignment="Left" Margin="310,45,0,0" VerticalAlignment="Top" Width="450" HorizontalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="36" Foreground="White"/>
+        <Label x:Name="DescriptionLabel" HorizontalAlignment="Left" Margin="385,100,0,0" VerticalAlignment="Top" Width="300" HorizontalContentAlignment="Center" FontFamily="Segoe UI Semilight" FontSize="20" Foreground="White"/>
+        <Label x:Name="TemperatureLabel" Content ="Temperatura: " HorizontalAlignment="Left" Margin="315,150,0,0" VerticalAlignment="Top" Width="370" FontFamily="Segoe UI Semilight" FontSize="16" Foreground="White"/>
+        <Label x:Name="ThermalSensationLabel" Content ="Sensación térmica: " HorizontalAlignment="Left" Margin="315,190,0,0" VerticalAlignment="Top" Width="370" FontFamily="Segoe UI Semilight" FontSize="16" Foreground="White"/>
+        <Label x:Name="HumidityLevelLabel" Content ="Nivel de humedad: " HorizontalAlignment="Left" Margin="315,230,0,0" VerticalAlignment="Top" Width="370" FontFamily="Segoe UI Semilight" FontSize="16" Foreground="White"/>
+        <Label x:Name="MiniumTemperatureLabel" Content ="Temperatura mínima: " HorizontalAlignment="Left" Margin="315,310,0,0" VerticalAlignment="Top" Width="370" FontFamily="Segoe UI Semilight" FontSize="16" Foreground="White" Height="30"/>
+        <Label x:Name="MaxiumTemperatureLabel" Content ="Temperatura máxima: " HorizontalAlignment="Left" Margin="315,270,0,0" VerticalAlignment="Top" Width="370" FontFamily="Segoe UI Semilight" FontSize="16" Foreground="White"/>
+        <Button x:Name="GoBackButton" Content="Regresar" HorizontalAlignment="Left" Margin="610,350,0,0" VerticalAlignment="Top" Height="40" Width="150" Click="GoBackButtonClick" FontSize="14" Foreground="Black" FontFamily="Segoe UI Light" />
     </Grid>
 </Window>

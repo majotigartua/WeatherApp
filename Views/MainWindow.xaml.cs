@@ -15,36 +15,29 @@ namespace WeatherApp
         public MainWindow()
         {
             InitializeComponent();
-            ConfigureView();
+            ConfigureWindow();
         }
 
-        private void ConfigureView()
+        private void ConfigureWindow()
         {
             CityTextBox.Focus();
         }
 
         private async void CheckCurrentWeatherButtonClick(object sender, RoutedEventArgs e)
         {
-            if (!CheckEmptyFields())
+            string city = CityTextBox.Text.ToLower();
+            CurrentWeatherService currentWeatherService = await Service.GetCurrentWeather(city);
+            if (!currentWeatherService.Error)
             {
-                string city = CityTextBox.Text.ToLower();
-                CurrentWeatherService currentWeatherService = await Service.GetCurrentWeather(city);
-                if (!currentWeatherService.Error)
+                currentWeather = currentWeatherService.CurrentWeather;
+                if (currentWeather != null)
                 {
-                    currentWeather = currentWeatherService.CurrentWeather;
-                    if (currentWeather != null)
-                    {
-                        GoToCheckCurrentWeather();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(currentWeatherService.Message, "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                    GoToCheckCurrentWeather();
                 }
             }
             else
             {
-                MessageBox.Show("No se puede dejar ningún campo vacío.", "ADVERTENCIA", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(currentWeatherService.Message, "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -56,33 +49,21 @@ namespace WeatherApp
             checkCurrentWeatherWindow.Show();
         }
 
-        private bool CheckEmptyFields()
-        {
-            return string.IsNullOrEmpty(CityTextBox.Text);
-        }
-
         private async void CheckWeatherForecastButtonClick(object sender, RoutedEventArgs e)
         {
-            if (!CheckEmptyFields())
+            string city = CityTextBox.Text.ToLower();
+            WeatherForecastService weatherForecastService = await Service.GetWeatherForecast(city);
+            if (!weatherForecastService.Error)
             {
-                string city = CityTextBox.Text.ToLower();
-                WeatherForecastService weatherForecastService = await Service.GetWeatherForecast(city);
-                if (!weatherForecastService.Error)
+                weatherForecast = weatherForecastService.WeatherForecast;
+                if (weatherForecast != null)
                 {
-                    weatherForecast = weatherForecastService.WeatherForecast;
-                    if (weatherForecast != null)
-                    {
-                        GoToCheckWeatherForecast();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(weatherForecastService.Message, "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                    GoToCheckWeatherForecast();
                 }
             }
             else
             {
-                MessageBox.Show("No se puede dejar ningún campo vacío.", "ADVERTENCIA", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(weatherForecastService.Message, "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -92,6 +73,11 @@ namespace WeatherApp
             checkWeatherForecast.ConfigureWindow(weatherForecast);
             Close();
             checkWeatherForecast.Show();
+        }
+
+        private void CityTextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
         }
     }
 }

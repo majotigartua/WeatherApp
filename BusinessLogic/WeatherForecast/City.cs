@@ -1,14 +1,25 @@
-﻿namespace WeatherApp.BusinessLogic.WeatherForecast
+﻿using Newtonsoft.Json;
+using Coordinates = WeatherApp.BusinessLogic.CurrentWeather.Coordinates;
+
+namespace WeatherApp.BusinessLogic.WeatherForecast
 {
     public class City
     {
-        public string Id { get; set; }
+        [JsonProperty("id")]
+        public long Id { get; set; }
+        [JsonProperty("name")]
         public string Name { get; set; }
-        public BusinessLogic.CurrentWeather.Coordinates Coordinates { get; set; }
+        [JsonProperty("coord")]
+        public Coordinates Coordinates{ get; set; }
+        [JsonProperty("country")]
         public string Country { get; set; }
-        public int Population { get; set; }
-        public int TimeZone { get; set; }
+        [JsonProperty("population")]
+        public long Population { get; set; }
+        [JsonProperty("timezone")]
+        public long TimeZone { get; set; }
+        [JsonProperty("sunrise")]
         public long Sunrise { get; set; }
+        [JsonProperty("sunset")]
         public long Sunset { get; set; }
     }
 }
